@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title="Digital Resume | CJ Chew", page_icon="💼")
+st.set_page_config(page_title="Digital Resume | CJ Chew", page_icon="💼", layout="wide")
 
 # --- PAGE SETUP ---
 about_page = st.Page(
