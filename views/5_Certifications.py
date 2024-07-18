@@ -52,7 +52,7 @@ SAP_CERTIFICATION_DESCRIPTION5 = """
 - ✔ It demonstrates the candidate's ability to perform administrative tasks for <span style="color:#f50057; font-size: 15;">**SAP SuccessFactors Learning Management**</span>, including implmentation, and system administration.
     """ 
 # --------------------------------------
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="wide")
+# st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="wide")
 
 st.title("📜 Certifications")
 # --------------- HELPER FUNCTIONS -----------------------

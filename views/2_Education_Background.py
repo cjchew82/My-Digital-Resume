@@ -58,7 +58,7 @@ BAC_DESCRIPTION = """
 """ 
 # --------------------------------------
 
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="centered")
+# st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="centered")
 
 
 # ------------ PATH SETTINGS ----------

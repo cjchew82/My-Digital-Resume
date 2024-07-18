@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+
+/* * {font-family: 'Readex Pro';} */
+* {font-family: Verdana, Arial, Helvetica, sans-serif;}
+
+
+a {
+    text-decoration: none;
+    color: blue !important;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #d33682 !important;
+    text-decoration: none;
+}
+
+ul {list-style-type: none;}
+
+hr {
+    margin-top: 0px;
+    margin-bottom: 5%;
+}
+
+#MainMenu {visibility: visible;}
+footer {visibility: hidden;}
+header {visibility: visible;}
+
+.profile-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 230px;
+}
+
+.streamlit-expanderHeader {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2E8B57; /* Customize the color */
+    font-family: 'Readex Pro', sans-serif; /* Customize the font */
+}
+/* Sidebar hidden initially */
+.sidebar .sidebar-content {
+    width: 0; /* hidden width */
+    transition: width 0.2s ease-in-out;
+    overflow: hidden; /* hide overflow */
+}
+
+.sidebar-expanded .sidebar-content {
+    width: 60px; /* expanded width for icons */
+    transition: width 0.2s ease-in-out;
+}
+
+.sidebar-expanded .icon-item:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.icon-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.icon-item .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the icon */
+    left: 50%;
+    margin-left: -60px; /* Center the tooltip */
+    transition: opacity 0.3s;
+}
+
+.icon-item .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}

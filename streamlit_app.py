@@ -1,5 +1,7 @@
 import streamlit as st
 
+st.set_page_config(page_title="Digital Resume | CJ Chew", page_icon="💼")
+
 # --- PAGE SETUP ---
 about_page = st.Page(
     "views/1_About_me.py",

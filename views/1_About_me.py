@@ -1,21 +1,21 @@
 from pathlib import Path
 import streamlit as st
-# from streamlit_extras.switch_page_button import switch_page
+from streamlit_extras.switch_page_button import switch_page
 from PIL import Image
 
 # ------------ PATH SETTINGS ----------
+# ------------ PATH SETTINGS ----------
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-# css_file = current_dir / "styles" / "main.css"
-# resume_file = current_dir / "assets" / "CJCHEW-Resume_2023_v1.pdf"
-# profile_pic = current_dir / "assets" / "home" /"profile-pic.png"
-# my_zone_pic = current_dir / "assets" / "home" / "my_zone.png"
-css_file = ("./styles/main.css")
-resume_file = ("./assets/CJCHEW-Resume_2023_v1.pdf")
-profile_pic = ("./assets/home/profile-pic.png")
+
+# Update the paths to be relative to the current directory
+css_file = current_dir / ".." / "styles" / "main.css"
+resume_file = current_dir / ".." / "assets" / "CJCHEW-Resume_2023_v1.pdf"
+profile_pic = current_dir / ".." / "assets" / "home" / "profile-pic.png"
+
 
 # ------------ CONSTANTS ----------
-PAGE_TITLE = "Digital Resume | CJ Chew"
-PAGE_ICON = "💼"
+# PAGE_TITLE = "Digital Resume | CJ Chew"
+# PAGE_ICON = "💼"
 NAME = "Chuan Juen (CJ) Chew"
 GENDER = "MALE 🚹"
 DESCRIPTION = """
@@ -44,7 +44,7 @@ PROJECTS = {
     "📈 Crypto Algorithm Trading Bot (Bybit)": ""
 }
 
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
+# st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
 # Function to generate social media icons
 def social_media_icon(link, icon_url, name):
@@ -54,71 +54,6 @@ def social_media_icon(link, icon_url, name):
     </a>
     <p style="text-align:center;font-size:16px;margin-top:10px;">{name}</p>
     '''
-
-# Sidebar content
-def sidebar_item(icon, name, key=None):
-    st.sidebar.markdown(f"""
-        <div class="icon-item">
-            <a href="#" onclick="toggleSidebar('{key}')">
-                <i class="fa {icon}" style="font-size:24px;"></i>
-            </a>
-            <span class="tooltip">{name}</span>
-        </div>
-    """, unsafe_allow_html=True)
-    if st.session_state.get(key, False):
-        st.session_state['sidebar_expanded'] = not st.session_state.get('sidebar_expanded', True)
-
-st.sidebar.markdown("""
-    <script>
-        function toggleSidebar(key) {
-            var expanded = localStorage.getItem(key);
-            if (expanded === "true") {
-                localStorage.setItem(key, "false");
-                document.body.classList.remove("sidebar-expanded");
-            } else {
-                localStorage.setItem(key, "true");
-                document.body.classList.add("sidebar-expanded");
-            }
-        }
-    </script>
-""", unsafe_allow_html=True)
-
-# Check sidebar expanded state
-if 'sidebar_expanded' not in st.session_state:
-    st.session_state['sidebar_expanded'] = False
-
-# Add the expanded class to the body if sidebar is expanded
-if st.session_state['sidebar_expanded']:
-    st.markdown('<style>body{overflow: hidden;}body.sidebar-expanded .sidebar-content { width: 60px; }</style>', unsafe_allow_html=True)
-
-# Sidebar items with Font Awesome icons
-sidebar_item("fa-home", "Home", key="home")
-sidebar_item("fa-graduation-cap", "Academic Background", key="academic")
-sidebar_item("fa-briefcase", "Professional Experiences", key="professional")
-sidebar_item("fa-flask", "Personal Projects", key="projects")
-sidebar_item("fa-certificate", "Certifications", key="certifications")
-
-# Main content
-if st.session_state.get('home', False):
-    st.title("🏡 Home")
-    st.write("This is the home page of the resume.")
-
-if st.session_state.get('academic', False):
-    st.title("🎓 Academic Background")
-    st.write("This is the academic background section of the resume.")
-
-if st.session_state.get('professional', False):
-    st.title("💼 Professional Experiences")
-    st.write("This is the professional experiences section of the resume.")
-
-if st.session_state.get('projects', False):
-    st.title("🔬 Personal Projects")
-    st.write("This is the personal projects section of the resume.")
-
-if st.session_state.get('certifications', False):
-    st.title("📜 Certifications")
-    st.write("This is the certifications section of the resume.")
-
 
 st.title("Hi / 您好 / Apa Kahbar")
 
@@ -143,7 +78,7 @@ with open(css_file) as f:
 
 profile_pic = Image.open(profile_pic)
 
-my_zone_pic = Image.open(my_zone_pic)
+# my_zone_pic = Image.open(my_zone_pic)
 # ------ HERO SECTION -----------
 
 cols = st.columns(2, gap='small')

@@ -69,7 +69,7 @@ DADVISOR_DESCRIPTION = """
     - ► Participated in the development of a real time monitoring application for industrial machines using Flask.
     """ 
 # --------------------------------------
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="wide")
+# st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="wide")
 
 st.title("Professional Experiences")
 # --------------- HELPER FUNCTIONS -----------------------

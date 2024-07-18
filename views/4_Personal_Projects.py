@@ -80,7 +80,7 @@ THREE_MODELS_PROJECT_DESCRIPTION = """
     - ✔ Deployed the application using Heroku
     """ 
 # --------------------------------------
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="wide")
+# st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="wide")
 
 st.title("Personal Projects")
 # --------------- HELPER FUNCTIONS -----------------------
