@@ -9,7 +9,7 @@ current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 
 # Update the paths to be relative to the current directory
 css_file = current_dir / ".." / "styles" / "main.css"
-resume_file = current_dir / ".." / "assets" / "CJCHEW-Resume_2023_v1.pdf"
+resume_file = current_dir / ".." / "assets" / "CJCHEW-Resume_Full.pdf"
 profile_pic = current_dir / ".." / "assets" / "home" / "profile-pic.png"
 
 
