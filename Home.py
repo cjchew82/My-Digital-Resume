@@ -59,8 +59,8 @@ INFO_CERT = Image.open(INFO_PICCERT_PATH)
 
 PROJECTS = {
     "📋 Digital resume streamlit ": "https://github.com/MouadEttali/streamlit_resume",
-    "📊 Quantatitive Backtest App streamlit ": "",
-    "📈 Crypto Algorithm Trading Bot (Bybit)": ""
+    "📊 Quantatitive Backtest App streamlit (In Progress) ": "",
+    "📈 Crypto Algorithm Trading Bot in Bybit (In PRogress)": ""
 }
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout="wide")
