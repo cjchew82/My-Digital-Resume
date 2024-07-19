@@ -52,7 +52,7 @@ SAP_CERTIFICATION_DESCRIPTION5 = """
 - ✔ It demonstrates the candidate's ability to perform administrative tasks for <span style="color:#f50057; font-size: 15;">**SAP SuccessFactors Learning Management**</span>, including implmentation, and system administration.
     """ 
 # --------------------------------------
-# st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="wide")
+# st.set_page_config(page_title="Digital Resume | CJ Chew", page_icon="💼", layout="wide")
 
 st.title("📜 Certifications")
 # --------------- HELPER FUNCTIONS -----------------------
@@ -105,3 +105,10 @@ certification_section(SAP_CERTIFICATION_TITLE3, SAP_CERTIFICATION_LINK3, SAP_CER
 certification_section(SAP_CERTIFICATION_TITLE4, SAP_CERTIFICATION_LINK4, SAP_CERTIFICATION_DESCRIPTION4, embed_code=credly_embed_code4)
 
 certification_section(SAP_CERTIFICATION_TITLE5, SAP_CERTIFICATION_LINK5, SAP_CERTIFICATION_DESCRIPTION5, embed_code=credly_embed_code5)
+
+# Add footer
+st.write('---')
+st.write('© Chew Chuan Juen  |  Last updated: July 2024')
+
+# Add sidebar text
+st.sidebar.text("Created by 💕 CJ Chew")

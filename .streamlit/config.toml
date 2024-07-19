@@ -1,6 +1,6 @@
 [server]
 headless = true
-port = 8080
+port = 8502
 enableCORS = false
 enableXsrfProtection = false
 mainModule = "streamlit_app.py"
